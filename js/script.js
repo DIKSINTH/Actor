@@ -16,30 +16,21 @@
   var WORKS = [
     {
       poster: "/assets/images/works/project-1.jpg",
-      title: "Silent Echoes",
+      title: "The Unknown",
       category: "Short Film",
-      year: "2024",
-      role: "Lead Actor",
-      desc: "A quiet story about a young man confronting his past, told through silence and expression.",
-      video: "https://youtube.com/watch?v=dQw4w9WgXcQ"
+      year: "2026",
+      role: "Lead Actor, Director, Writer, Cinematographer, Editor",
+      desc: "A gripping psychological journey of a man trapped within his subconscious mind while in a coma, struggling to uncover the truth and find his way back to reality.",
+      video: "https://www.youtube.com/watch?v=eRpcbpz_vBQ&t=901s",
     },
     {
       poster: "/assets/images/works/project-2.jpg",
-      title: "Thanimayil",
-      category: "Independent Film",
-      year: "2024",
-      role: "Supporting Actor",
-      desc: "A poetic short exploring loneliness and connection in the heart of the city."
+      title: "The Hero",
+      category: "Short Film",
+      year: "Coming Soon - Dec 2026 Expected",
+      role: "Lead Actor, Director, Writer, Cinematographer, Editor",
+      desc: "A journey of an ordinary, socially conscious man to his friend's wedding takes an unexpected turn, leading him to uncover the horrifying truth behind the real faces of rapists.",
     },
-    {
-      poster: "/assets/images/works/project-3.jpg",
-      title: "Veyyil",
-      category: "Acting Project",
-      year: "2023",
-      role: "Lead Actor",
-      desc: "An emotional workshop piece capturing the heat of family bonds and personal ambition.",
-      video: "/assets/videos/project-1.mp4"
-    }
   ];
 
   /* ---------- DOM helpers ---------- */
@@ -57,7 +48,7 @@
         duration: 800,
         once: true,
         offset: 80,
-        easing: "ease-in-out"
+        easing: "ease-in-out",
       });
     }
   }
@@ -164,7 +155,7 @@
           }
         });
       },
-      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
     );
 
     sections.forEach(function (s) {
@@ -264,9 +255,11 @@
     var nextBtn = $("#lightboxNext");
     // Every clickable photo on the page: gallery, profile, work posters
     var triggers = $("[data-lightbox]");
-    var images = triggers.map(function (el) {
-      return el.querySelector("img");
-    }).filter(Boolean);
+    var images = triggers
+      .map(function (el) {
+        return el.querySelector("img");
+      })
+      .filter(Boolean);
 
     if (!images.length) {
       return;
@@ -342,7 +335,7 @@
       function (e) {
         touchStartX = e.changedTouches[0].clientX;
       },
-      { passive: true }
+      { passive: true },
     );
     lb.addEventListener(
       "touchend",
@@ -353,7 +346,7 @@
           else prev();
         }
       },
-      { passive: true }
+      { passive: true },
     );
   }
 
