@@ -15,7 +15,7 @@
   */
   var WORKS = [
     {
-      poster: "/assets/images/works/project-1.jpg",
+      poster: "/assets/images/works/project-1.JPG",
       title: "The Unknown",
       category: "Short Film",
       year: "2026",
@@ -24,7 +24,7 @@
       video: "https://www.youtube.com/watch?v=eRpcbpz_vBQ&t=901s",
     },
     {
-      poster: "/assets/images/works/project-2.jpg",
+      poster: "/assets/images/works/project-2.PNG",
       title: "The Hero",
       category: "Short Film",
       year: "Coming Soon - Dec 2026 Expected",
